@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { TextField, Button, Box } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
-import { MainWrapper, Form, Main, GlobalStyle, theme, Toaster } from './style/style'
+import { MainWrapper, Form, Main, GlobalStyle, theme, Toaster } from './style/style.js'
 import axios from 'axios';
 import { ThemeProvider } from '@mui/material/styles';
 import { toast } from 'react-toastify';

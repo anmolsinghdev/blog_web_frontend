@@ -3,7 +3,7 @@ import LoginPage from './Login';
 import Main from './Main';
 import Home from './Home';
 import Signup from './Signup';
-import { Header, GlobalStyle, Li, Toaster } from './style/style'
+import { Header, GlobalStyle, Li, Toaster } from './style/style.js'
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 

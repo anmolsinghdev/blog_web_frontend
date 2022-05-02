@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { GlobalStyle, MainScreenWrapper } from './style/style';
+import { GlobalStyle, MainScreenWrapper } from './style/style.js';
 import Footer from './Footer.js';
 const Main = () => {
     const [user, setUser] = useState(null);

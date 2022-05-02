@@ -1,5 +1,5 @@
 import React from 'react';
-import { GlobalStyle, HomeWrapper } from './style/style';
+import { GlobalStyle, HomeWrapper } from './style/style.js';
 import { Button } from '@mui/material';
 import { useNavigate } from "react-router-dom";
 import Footer from './Footer.js';
