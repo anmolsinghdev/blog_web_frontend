@@ -61,11 +61,11 @@ const Login = () => {
         <>
             {(loading === false) ? <MainWrapper>
                 <Box >
-                    <CircularProgress size={'5rem'} />
+                    <CircularProgress size={'5rem'} color='secondary' theme={theme} />
                 </Box>
             </MainWrapper> : <>
                 <GlobalStyle />
-                <MainWrapper>
+                <MainWrapper imgUrl="./Images/Image.jpg">
                     <Toaster />
                     <Main>
                         <h1>Login Form</h1>

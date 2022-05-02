@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 `
+
 export const theme = createTheme({
     palette: {
         secondary: {
@@ -136,7 +137,7 @@ export const MainWrapper = styled.div`
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image : url("http://cdn30.us1.fansshare.com/image/wallpaper1920x1080/blue-background-texture-solid-color-wallpaper-full-hd-1559727111.jpg");
+    background-image : url("https://mcdn.wallpapersafari.com/medium/68/7/Xl3NoH.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
