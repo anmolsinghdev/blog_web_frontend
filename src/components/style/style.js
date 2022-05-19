@@ -80,6 +80,7 @@ export const Header = styled.header`
   > ul {
             display:flex;
             justify-content:flex-end;
+            align-items:center;
             padding:1rem;
             gap:3rem;
             text-decoration :none;
@@ -203,9 +204,9 @@ export const MainScreenWrapper = styled.div`
     height: 100vh;
     display flex;
     flex-direction:column;
-    justify-content:center;
+    align-items:center;
     gap:1rem;
-    padding-left:2rem;
+    padding-top:2rem;
     background-image : url("https://wallpaperaccess.com/full/2089171.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -215,17 +216,15 @@ export const MainScreenWrapper = styled.div`
         font-size:2rem;
         color:#fff;
     }
-    >span {
-        font-size:1.2rem;
+    >h2 {
+        font-size:2rem;
         color:#fff;
     }
     >p{
         color:#fff;
         font-size:1rem;
+        text-align:center;
         width:50%;
-    }
-    >button{
-        width:10%;
     }
 `
 
@@ -240,6 +239,10 @@ export const Main = styled.div`
     border-radius: 5px;
     opacity:2;
     box-shadow: 0px 0px 20px rgba(255, 255, 255, .3);
+`
+export const Blogbtn = styled.div`
+    display: flex;
+    gap:2rem;
 `
 
 export const Imagelabel = styled.label`

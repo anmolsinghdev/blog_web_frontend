@@ -58,7 +58,7 @@ const Signup = () => {
             notifySuccess('Successfully created!!');
             setTimeout(() => {
                 toast.dismiss()
-                nav('/Login')
+                nav('/login')
             }, 2500);
         }
 

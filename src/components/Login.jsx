@@ -43,7 +43,7 @@ const Login = () => {
                     setStatus(true);
                     setTimeout(() => {
                         toast.dismiss();
-                        nav('/Main');
+                        nav('/main');
                     }, 2000);
                     return notifySuccess('Successfully Logged In!!');
                 }
