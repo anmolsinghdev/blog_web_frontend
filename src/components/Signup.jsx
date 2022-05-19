@@ -12,6 +12,8 @@ import CircularProgress from '@mui/material/CircularProgress';
 const Signup = () => {
 
     const [username, setUsername] = useState(null);
+    const [firstname, setFirstname] = useState(null);
+    const [lastname, setLastname] = useState(null);
     const [password, setPassword] = useState(null);
     const [loading, setLoading] = useState(false);
     const [email, setEmail] = useState(null);
@@ -32,7 +34,9 @@ const Signup = () => {
 
     const onFormSubmit = async (e) => {
         e.preventDefault();
-        if (username === null || password === null || repeatPassword === null || email === null) {
+        if (firstname === null || lastname === null || username === null || password === null || repeatPassword === null || email === null) {
+            if (firstname === null) return notifyError('Please Enter Firstname');
+            if (lastname === null) return notifyError('Please Enter Lastname');
             if (username === null) return notifyError('Please Enter Username');
             if (password === null) return notifyError('Please Enter password');
             if (email === null) return notifyError('Please Enter email');
@@ -49,7 +53,7 @@ const Signup = () => {
             return false;
         } else {
             console.log('else')
-            const res = await axios.post('http://localhost:4000/create', { 'username': username, 'password': password, 'email': email });
+            const res = await axios.post('http://localhost:4000/create', { 'firstname': firstname, 'lastname': lastname, 'username': username, 'password': password, 'email': email });
             console.log(res)
             notifySuccess('Successfully created!!');
             setTimeout(() => {
@@ -79,10 +83,12 @@ const Signup = () => {
                         <h1>Signup Form</h1>
                         <Form onSubmit={onFormSubmit}>
                             <ThemeProvider theme={theme}>
+                                <TextField sx={{ input: { color: '#fff' } }} label="firstname" variant="standard" color='secondary' onChange={(e) => setFirstname(e.target.value)} autoComplete="off" />
+                                <TextField sx={{ input: { color: '#fff' } }} label="lastname" variant="standard" color='secondary' onChange={(e) => setLastname(e.target.value)} autoComplete="off" />
                                 <TextField sx={{ input: { color: '#fff' } }} label="username" variant="standard" color='secondary' onChange={(e) => setUsername(e.target.value)} autoComplete="off" />
                                 <TextField sx={{ input: { color: '#fff' } }} label="email" variant="standard" color='secondary' onChange={(e) => setEmail(e.target.value)} autoComplete="off" />
-                                <TextField sx={{ input: { color: '#fff' } }} label="password" variant="standard" color='secondary' onChange={(e) => setPassword(e.target.value)} autoComplete="off" />
-                                <TextField sx={{ input: { color: '#fff' } }} label="repeat password" variant="standard" color='secondary' onChange={(e) => setRepeatPassword(e.target.value)} autoComplete="off" />
+                                <TextField sx={{ input: { color: '#fff' } }} type='password' label="password" variant="standard" color='secondary' onChange={(e) => setPassword(e.target.value)} autoComplete="off" />
+                                <TextField sx={{ input: { color: '#fff' } }} type='password' label="repeat password" variant="standard" color='secondary' onChange={(e) => setRepeatPassword(e.target.value)} autoComplete="off" />
                                 <Button sx={{ marginTop: '1rem' }} variant="contained" size="medium" endIcon={<SendIcon />} type='submit'>Submit</Button>
                             </ThemeProvider>
                         </Form>

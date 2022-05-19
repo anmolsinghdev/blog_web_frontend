@@ -1,6 +1,6 @@
 import React from 'react';
 import { GlobalStyle, HomeWrapper } from './style/style.js';
-import { Button } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 import { useNavigate } from "react-router-dom";
 import Footer from './Footer.js';
 const Home = () => {
@@ -15,12 +15,17 @@ const Home = () => {
         <>
             <GlobalStyle />
             <HomeWrapper>
-                <h1>Landing Page</h1>
-                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, amet omnis doloremque minus libero oicta non dolor voluptatum!</span>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat temporibus totam, dolorum ex dolore error iure id rerum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat temporibus totam, dolorum ex dolsequi aspernatur ea, magni eveniet. Incidunt vitae consequuntur ex, ducimus ea eum.
-                </p>
-                <Button variant="contained" onClick={OnButtonHandle}>Sign In</Button>
+                <Grid wrap="wrap" overflow='hidden' container spacing={5}>
+                    <Grid item xs={12}>
+                        <h1>Blog_Web</h1>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, amet omnis doloremque minus ipsum dolor sit amet consectetur adipisicing elit. Optio, amet omnis doloremque minus libero ipsum dolor sit amet consectetur adipisicing elit. Optio, amet omnis doloremque minus libero libero oicta non dolor voluptatum!</p>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Button variant="contained" onClick={OnButtonHandle}>Sign In</Button>
+                    </Grid>
+                </Grid>
             </HomeWrapper>
             <Footer />
         </>

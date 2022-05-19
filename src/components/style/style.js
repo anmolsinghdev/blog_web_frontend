@@ -157,28 +157,46 @@ export const HomeWrapper = styled.div`
     display flex;
     flex-direction:column;
     justify-content:center;
-    gap:1rem;
+    align-items:center;
     padding-left:2rem;
+    
     background-image : url("https://cdn.shopify.com/s/files/1/0090/9236/6436/articles/PPC_Landing_Page.png?v=1626868475");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family:roboto; 
-    >h1 {
+    font-family:roboto;
+    @media (max-width: 400px) {
+        align-items:center;
+        color:red;
+        text-align:center;
+      } 
+    & h1 {
         font-size:2rem;
         color:#fff;
+        @media (max-width: 400px) {
+            align-items:center;
+        }
     }
-    >span {
+    & span {
         font-size:1.2rem;
         color:#fff;
     }
-    >p{
+    & p{
         color:#fff;
         font-size:1rem;
         width:50%;
+        @media (max-width: 400px) {
+            text-align:center;
+            margin-left:20%;
+          } 
     }
-    >button{
+    & button{
         width:10%;
+        @media (min-width: 260px) and (max-width: 875px)  {
+            // align-items:center;
+            text-align:center;
+            width:30%;
+          }
     }
 `
 export const MainScreenWrapper = styled.div`

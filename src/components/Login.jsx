@@ -22,11 +22,11 @@ const Login = () => {
     const notifySuccess = (mes) => toast.success(mes);
     const nav = useNavigate();
 
-    const setTokenStorage = (token) => {
+    const setTokenStorage = ({ token, name }) => {
         setToken(token);
         sessionStorage.setItem('token', token);
         sessionStorage.setItem('isAuthenticated', 'true');
-        sessionStorage.setItem('user', username);
+        sessionStorage.setItem('user', name);
     };
 
     const onFormSubmit = async (e) => {
@@ -38,7 +38,7 @@ const Login = () => {
             const res = await axios.post('http://localhost:4000/login', { 'username': username, 'password': password, });
             if (res.data) {
                 if (res.data.status === true && res.data.token !== null) {
-                    setTokenStorage(res.data.token);
+                    setTokenStorage(res.data);
                     setisAuthenticated(res.data.status);
                     setStatus(true);
                     setTimeout(() => {
