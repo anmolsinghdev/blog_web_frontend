@@ -6,6 +6,8 @@ import { createTheme } from '@mui/material/styles';
 import { ToastContainer } from 'react-toastify';
 import { red, green } from '@mui/material/colors';
 
+
+
 export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
@@ -76,6 +78,18 @@ export const H1 = styled.h1`
     text-align:center;
     margin:2rem 0rem;
 `
+export const H3 = styled.h3`
+    color: #fff;
+
+    font-family:roboto;
+    text-align:center;
+   
+    // margin:2rem 0rem;
+    >a{
+        color:white;
+        text-decoration: none;
+    }
+`
 export const Header = styled.header`
   > ul {
             display:flex;
@@ -84,13 +98,10 @@ export const Header = styled.header`
             padding:1rem;
             gap:3rem;
             text-decoration :none;
-            background:#1565C0;
-            // background:#ccc;
             height:100%;
             
             .text-link {
                  color:#fff;
-                // font-weight:bold;
                 font-size:1.2rem;
                 font-family:roboto;
                 list-style:none;
@@ -112,6 +123,7 @@ export const Form = styled.form`
     gap:1rem;
     padding:2rem;
 `
+
 export const Li = styled.li`
 list-style:none;
 height:100%;
@@ -121,13 +133,26 @@ height:100%;
     font-family:roboto; 
     text-decoration:none;
     cursor:pointer;
-    
+ 
 }
-#logout{
-    &:hover {
-        color:red;
+
+`
+export const Li2 = styled.li`
+list-style:none;
+height:100%;
+width: 100%;
+>a {
+    color:red;
+    font-size:1.2rem;
+    font-family:roboto; 
+    height:100%;
+    width: 100%;
+    text-decoration:none;
+    cursor:pointer;
+    background-color: transparent;
+    :hover{
+        background-color: white;
     }
-    
 }
 
 `
@@ -155,7 +180,7 @@ export const FooterWrapper = styled.div`
 `
 export const HomeWrapper = styled.div`
     height: 100vh;
-    display flex;
+    display :flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
@@ -202,7 +227,7 @@ export const HomeWrapper = styled.div`
 `
 export const MainScreenWrapper = styled.div`
     height: 100vh;
-    display flex;
+    display :flex;
     flex-direction:column;
     align-items:center;
     gap:1rem;

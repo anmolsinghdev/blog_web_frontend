@@ -6,11 +6,8 @@ import Footer from './Footer.js';
 const Home = () => {
     const nav = useNavigate();
     const OnButtonHandle = () => {
-        setTimeout(() => {
-            nav("/signup")
-        }, 1000);
+        nav("/signup")
     }
-
 
     return (
         <>

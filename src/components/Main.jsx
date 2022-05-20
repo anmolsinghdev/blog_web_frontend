@@ -43,7 +43,6 @@ const Main = () => {
         }
         data()
     }, [])
-    console.log(user)
 
     return (
         <>

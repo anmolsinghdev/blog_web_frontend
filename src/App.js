@@ -2,6 +2,7 @@ import React from 'react'
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Navbar from './components/Navbar';
+import Nav from './components/Nav';
 import Home from './components/Home';
 import Main from './components/Main';
 import PrivateRoute from './components/ProtectRouting';
@@ -10,7 +11,8 @@ import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
+      <Nav />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
