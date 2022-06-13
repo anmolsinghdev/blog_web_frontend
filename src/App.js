@@ -1,10 +1,10 @@
 import React from 'react'
 import Login from './components/Login';
 import Signup from './components/Signup';
-import Navbar from './components/Navbar';
-import Nav from './components/Nav';
+// import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Main from './components/Main';
+import Nav from './components/Nav'
 import PrivateRoute from './components/ProtectRouting';
 import { Routes, Route } from "react-router-dom";
 import 'react-toastify/dist/ReactToastify.css';

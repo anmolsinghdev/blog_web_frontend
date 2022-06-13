@@ -91,6 +91,7 @@ export const H3 = styled.h3`
     }
 `
 export const Header = styled.header`
+background-color: #1565C0;
   > ul {
             display:flex;
             justify-content:flex-end;
@@ -112,6 +113,32 @@ export const Header = styled.header`
                 }
             }   
         }
+`
+
+export const NavHeader = styled.div`
+display :flex;
+color:white;
+width: 100%;
+justify-content:space-between;
+align-items: center;
+.navlist{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap:2rem;
+    > a{
+        text-decoration: none;
+        font-size: 1.2rem;
+        color:white
+    }
+}
+`
+export const LiTitle = styled.div`
+ > a  {
+    text-decoration: none;
+    border: none;
+    color:white
+ }
 `
 
 
